@@ -36,7 +36,9 @@ android {
 
 }
 
+// TODO (10): Add libraries for retrofit2 and corroutines
 dependencies {
+
     // Dependencies Version
     var lifecycle_version = "2.6.2"
     var fragment_version = "1.6.2"
@@ -54,8 +56,15 @@ dependencies {
     // LifeData (Interconnection between activity and viewModel)
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     // Optional Libraries (Facilitate the creation of viewModel in Activity and Fragment)
+    // Fragment
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    // Activity
     implementation "androidx.activity:activity-ktx:$activity_version"
+    // Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // Test Dependencies
     testImplementation 'junit:junit:4.13.2'
