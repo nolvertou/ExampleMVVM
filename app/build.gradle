@@ -3,7 +3,6 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-// TODO (1): pdate this project to use a newer compileSdkVersion
 android {
     namespace 'nou.com.example.examplemvvm'
     compileSdk 34
@@ -31,14 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    // TODO (2): Add viewBinding
     buildFeatures{
         viewBinding = true
     }
 
 }
 
-// TODO (3): Add libraries
 dependencies {
     // Dependencies Version
     var lifecycle_version = "2.6.2"
@@ -56,7 +53,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LifeData (Interconnection between activity and viewModel)
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
-    // Optionals Libraries (Facilitate the creation of viewModel in Activity and Fragment)
+    // Optional Libraries (Facilitate the creation of viewModel in Activity and Fragment)
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     implementation "androidx.activity:activity-ktx:$activity_version"
 

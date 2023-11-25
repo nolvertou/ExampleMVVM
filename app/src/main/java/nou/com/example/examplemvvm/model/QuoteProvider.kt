@@ -1,8 +1,5 @@
 package nou.com.example.examplemvvm.model
 
-// TODO (7): Create QuoteProvider class that contains a companion object with:
-//      7.1 A private quote list
-//      7.2 A public function that returns a random quote
 class QuoteProvider{
 
     // Notes:

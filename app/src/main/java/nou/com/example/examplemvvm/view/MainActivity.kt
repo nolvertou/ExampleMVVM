@@ -8,11 +8,11 @@ import nou.com.example.examplemvvm.databinding.ActivityMainBinding
 import nou.com.example.examplemvvm.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
-    // TODO (5): Add binding and setContentView
+
     private lateinit var binding: ActivityMainBinding
 
-    // TODO (9): Create a QuoteViewModel
-    // by viewModels is going to do all the connections between viewModel and activity
+    // Create a QuoteViewModel
+    // "by viewModels" is going to do all the connections between viewModel and activity,
     // this is achieved using the activity library already implemented
     private val quoteViewModel: QuoteViewModel by viewModels()
 
