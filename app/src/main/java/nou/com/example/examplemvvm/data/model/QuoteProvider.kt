@@ -10,6 +10,5 @@ class QuoteProvider{
     //      So, everyone can access into it
     companion object{
         var quotes: List<QuoteModel> = emptyList()
-
     }
 }
