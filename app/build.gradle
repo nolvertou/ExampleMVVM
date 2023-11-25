@@ -3,14 +3,15 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// TODO (1): pdate this project to use a newer compileSdkVersion
 android {
     namespace 'nou.com.example.examplemvvm'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "nou.com.example.examplemvvm"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -30,14 +31,36 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // TODO (2): Add viewBinding
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
+// TODO (3): Add libraries
 dependencies {
+    // Dependencies Version
+    var lifecycle_version = "2.6.2"
+    var fragment_version = "1.6.2"
+    var activity_version = "1.8.1"
 
+    // Default Dependencies
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Project Dependencies
+    // ViewModel  (Its an architecture layer)
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LifeData (Interconnection between activity and viewModel)
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // Optionals Libraries (Facilitate the creation of viewModel in Activity and Fragment)
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+    // Test Dependencies
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
